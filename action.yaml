@@ -17,6 +17,7 @@ runs:
   steps:
     - name: Extract AWS Information from Folder
       id: extract-info
+      shell: bash
       run: |
         AWS_ACCOUNT_ID=$(echo "${{ inputs.folder }}" | awk -F'/' '{print $4}')
         AWS_REGION=$(echo "${{ inputs.folder }}" | awk -F'/' '{print $5}')
