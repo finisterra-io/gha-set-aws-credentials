@@ -28,7 +28,7 @@ runs:
         echo "AWS_ROLE=arn:aws:iam::$AWS_ACCOUNT_ID:role/gha-cicd" >> $GITHUB_ENV
 
     - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v2
+      uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-region: ${{ env.AWS_REGION }}
         role-to-assume: ${{ env.AWS_ROLE }}
