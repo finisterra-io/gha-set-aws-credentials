@@ -25,7 +25,7 @@ runs:
           AWS_REGION="us-east-1"
         fi
         echo "AWS_REGION=$AWS_REGION" >> $GITHUB_ENV
-        echo "AWS_ROLE=arn:aws:iam::$AWS_ACCOUNT_ID:role/gha-cicd" >> $GITHUB_ENV
+        echo "AWS_ROLE=arn:aws:iam::$AWS_ACCOUNT_ID:role/ft-rw-gha-cicd-role" >> $GITHUB_ENV
 
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
